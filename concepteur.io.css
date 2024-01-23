@@ -2666,7 +2666,6 @@ a {
   align-items: baseline;
 }
 
-.pg,
 .nvb,
 .sb {
   flex-direction: column;
@@ -3664,7 +3663,6 @@ details > p {
 
 .pg {
   height: 100%;
-  max-height: 100vh;
   background-color: transparent;
   overflow-y: auto;
   width: 100%;
