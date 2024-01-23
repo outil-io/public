@@ -3495,11 +3495,8 @@ details > p {
   outline: none;
 }
 
-.preview input {
-  all: unset;
-}
-.preview textarea {
-  all: unset;
+.preview input, .preview textarea {
+  border: unset;
 }
 .preview .builder-main-bottomNavbar {
   width: 100%;
