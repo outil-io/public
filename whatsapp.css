@@ -3815,3 +3815,149 @@
   .MuiGrid-root {
     color: unset;
   }
+
+       .chat-box {
+            width: 320px;
+            position: absolute;
+            margin: 0 auto;
+            overflow: hidden;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            z-index: 15;
+            box-shadow: rgba(0, 0, 0, 0.3) 0px 4px 12px 0px;
+            right: 0;
+            bottom: 80;
+            margin: 15px;
+            background: #fff;
+            border-radius: 15px;
+            visibility: hidden;
+        }
+
+        .chat-button {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            margin: 15px;
+            border-radius: 25px;
+            cursor: pointer;
+        }
+   
+   
+        #chat-button {
+            text-size-adjust: 100%;
+            font: 400 14px / 18px system-ui;
+            position: fixed;
+            z-index: 99999999;
+            margin: 20px;
+            inset: auto 0px 0px auto;
+        }
+
+        #chat-button button {
+            width: 60px;
+            height: 60px;
+            overflow: visible;
+            text-transform: none;
+            max-width: 100%;
+            box-shadow: rgba(0, 0, 0, 0.3) 0px 4px 12px 0px;
+            position: relative;
+            border-radius: 100px;
+            color: rgb(79, 206, 93);
+            background-color: rgb(255, 255, 255);
+            border-width: 0px;
+            padding: 0px 15px;
+        }
+
+
+        .section_vva {
+            max-width: 550px;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            padding-top: 0px;
+            padding-bottom: 0px;
+            padding-left: 0px;
+            padding-right: 0px;
+            border-radius: 10px;
+            background-image: url(https://storage.googleapis.com/public.outil.io/medias/1/images/whatsapp.png);
+        }
+
+        .column_YyH {
+            background-color: #32D951;
+            color: white;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            align-items: center;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            padding-left: 20px;
+            padding-right: 20px;
+            display: flex;
+            justify-content: center;
+            border-radius: 100px;
+        }
+
+        .grid_0Uk {
+            padding-top: 20px;
+            padding-bottom: 20px;
+            padding-left: 20px;
+            padding-right: 20px;
+            background-color: rgba(255, 255, 255, 1);
+        }
+
+        .column_Nkm {
+            background-color: rgba(255, 255, 255, 1);
+            flex-direction: column;
+            flex-wrap: nowrap;
+            max-width: 250px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            padding-left: 20px;
+            padding-right: 20px;
+            border-radius: 10px;
+        }
+
+        .grid_GYM {
+            background-size: cover;
+            background-color: rgba(230, 221, 212, 0.91);
+            padding-top: 30px;
+            padding-bottom: 30px;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        .icon_l5E {
+            all: unset;
+            height: 40px;
+            color: rgba(239, 239, 239, 0.7);
+            width: 40px;
+            height: 40px;
+        }
+
+        .text_NXL {
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+
+        .image_piI {
+            object-fit: cover;
+            margin-right: 10px;
+            border-radius: 100px;
+            width: 50px;
+            height: 50px;
+            background-position: center;
+        }
+
+        .column_Xxd {
+            align-content: center;
+            align-items: center;
+        }
+
+        .grid_Pep {
+            background-color: #095E54;
+            color: rgba(255, 255, 255, 1);
+        }
+
