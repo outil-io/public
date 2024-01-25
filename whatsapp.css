@@ -3817,7 +3817,7 @@
 
        .chat-box {
             width: 320px;
-            position: absolute;
+            position: fixed;
             margin: 0 auto;
             overflow: hidden;
             display: -webkit-box;
@@ -3827,10 +3827,10 @@
             -webkit-box-direction: normal;
             -ms-flex-direction: column;
             flex-direction: column;
-            z-index: 15;
+            z-index: 1500;
             box-shadow: rgba(0, 0, 0, 0.3) 0px 4px 12px 0px;
             right: 0;
-            bottom: 80;
+            bottom: 100px;
             margin: 15px;
             background: #fff;
             border-radius: 15px;
@@ -3857,6 +3857,7 @@
         }
 
         #chat-button button {
+            all: inherit;
             width: 60px;
             height: 60px;
             overflow: visible;
