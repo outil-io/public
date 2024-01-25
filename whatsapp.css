@@ -1882,7 +1882,7 @@
     max-width: 350px;
   }
   
-  .page {
+   {
     padding: 0 20px;
     height: inherit;
   }
@@ -2025,7 +2025,6 @@
   .column,
   .grid,
   .section,
-  .page,
   .sideBar,
   .navbar,
   .horizontalTab,
@@ -2038,7 +2037,7 @@
   .column .horizontalDrag.left,
   .grid .horizontalDrag.left,
   .section .horizontalDrag.left,
-  .page .horizontalDrag.left,
+.horizontalDrag.left,
   .sideBar .horizontalDrag.left,
   .navbar .horizontalDrag.left,
   .horizontalTab .horizontalDrag.left,
@@ -2049,7 +2048,7 @@
   .column .horizontalDrag.right,
   .grid .horizontalDrag.right,
   .section .horizontalDrag.right,
-  .page .horizontalDrag.right,
+  .horizontalDrag.right,
   .sideBar .horizontalDrag.right,
   .navbar .horizontalDrag.right,
   .horizontalTab .horizontalDrag.right,
@@ -2065,7 +2064,7 @@
   .column .clickable,
   .grid .clickable,
   .section .clickable,
-  .page .clickable,
+   .clickable,
   .sideBar .clickable,
   .navbar .clickable,
   .horizontalTab .clickable,
@@ -2076,7 +2075,7 @@
   .column:hover .dropZone.horizontalDrag,
   .grid:hover .dropZone.horizontalDrag,
   .section:hover .dropZone.horizontalDrag,
-  .page:hover .dropZone.horizontalDrag,
+  :hover .dropZone.horizontalDrag,
   .sideBar:hover .dropZone.horizontalDrag,
   .navbar:hover .dropZone.horizontalDrag,
   .horizontalTab:hover .dropZone.horizontalDrag,
@@ -2212,7 +2211,7 @@
   .column,
   .grid,
   .section,
-  .page {
+   {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -2233,7 +2232,7 @@
     flex-wrap: wrap;
   }
   
-  .page,
+  ,
   .navbar,
   .sideBar {
     align-items: baseline;
@@ -2457,7 +2456,7 @@
     align-content: start;
   }
   
-  .page,
+  ,
   .navbar,
   .builder-main-sideBar .sideBar,
   .bottomNavbar,
@@ -2467,7 +2466,7 @@
     height: inherit;
     background-color: transparent;
   }
-  .page.draggable:hover,
+  .draggable:hover,
   .navbar.draggable:hover,
   .builder-main-sideBar .sideBar.draggable:hover,
   .bottomNavbar.draggable:hover,
@@ -2477,7 +2476,7 @@
     outline: 1px solid rgba(64, 10, 151, 0.644) !important;
     overflow: visible;
   }
-  .page.draggable:hover > div > .content > div > .section,
+  .draggable:hover > div > .content > div > .section,
   .navbar.draggable:hover > div > .content > div > .section,
   .builder-main-sideBar .sideBar.draggable:hover > div > .content > div > .section,
   .bottomNavbar.draggable:hover > div > .content > div > .section,
@@ -2486,7 +2485,7 @@
   .tableau.draggable:hover > div > .content > div > .section {
     outline: 1px dashed rgb(10, 151, 17);
   }
-  .page.draggable:hover > div > .content > div > .column,
+  .draggable:hover > div > .content > div > .column,
   .navbar.draggable:hover > div > .content > div > .column,
   .builder-main-sideBar .sideBar.draggable:hover > div > .content > div > .column,
   .bottomNavbar.draggable:hover > div > .content > div > .column,
@@ -2495,7 +2494,7 @@
   .tableau.draggable:hover > div > .content > div > .column {
     outline: 1px dashed rgb(238, 204, 204);
   }
-  .page.draggable:hover > div > .content > div > .grid,
+  .draggable:hover > div > .content > div > .grid,
   .navbar.draggable:hover > div > .content > div > .grid,
   .builder-main-sideBar .sideBar.draggable:hover > div > .content > div > .grid,
   .bottomNavbar.draggable:hover > div > .content > div > .grid,
@@ -2504,7 +2503,7 @@
   .tableau.draggable:hover > div > .content > div > .grid {
     outline: 1px dashed rgb(238, 204, 204);
   }
-  .page.draggable:hover > div > .content > div > .component,
+  .draggable:hover > div > .content > div > .component,
   .navbar.draggable:hover > div > .content > div > .component,
   .builder-main-sideBar .sideBar.draggable:hover > div > .content > div > .component,
   .bottomNavbar.draggable:hover > div > .content > div > .component,
@@ -2513,7 +2512,7 @@
   .tableau.draggable:hover > div > .content > div > .component {
     outline: 1px dashed rgba(0, 0, 0, 0.479);
   }
-  .page.draggable.active,
+  .draggable.active,
   .navbar.draggable.active,
   .builder-main-sideBar .sideBar.draggable.active,
   .bottomNavbar.draggable.active,
@@ -2523,7 +2522,7 @@
     outline: 2px solid rgba(64, 10, 151, 0.644) !important;
     z-index: 3;
   }
-  .page.draggable.active > .dragHandle,
+  .draggable.active > .dragHandle,
   .navbar.draggable.active > .dragHandle,
   .builder-main-sideBar .sideBar.draggable.active > .dragHandle,
   .bottomNavbar.draggable.active > .dragHandle,
@@ -2535,7 +2534,7 @@
     opacity: 0.5;
     z-index: 100;
   }
-  .page:hover > div > .dropZone.horizontalDrag,
+  :hover > div > .dropZone.horizontalDrag,
   .navbar:hover > div > .dropZone.horizontalDrag,
   .builder-main-sideBar .sideBar:hover > div > .dropZone.horizontalDrag,
   .bottomNavbar:hover > div > .dropZone.horizontalDrag,
@@ -2604,7 +2603,7 @@
     padding-top: 10px;
   }
   
-  .page {
+   {
     height: 100%;
   }
   
@@ -2690,7 +2689,7 @@
     display: flex;
   }
   
-  .pageContainer {
+  Container {
     display: flex;
     flex: 1;
     flex-direction: column;
@@ -2830,7 +2829,7 @@
     flex-direction: column;
   }
   
-  .page-wrapper {
+  -wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -2838,15 +2837,15 @@
     overflow: auto;
     width: 100%;
   }
-  .page-wrapper::-webkit-scrollbar-track {
+  -wrapper::-webkit-scrollbar-track {
     -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
     background-color: light-gray;
   }
-  .page-wrapper::-webkit-scrollbar {
+  -wrapper::-webkit-scrollbar {
     width: 10px;
     background-color: light-gray;
   }
-  .page-wrapper::-webkit-scrollbar-thumb {
+  -wrapper::-webkit-scrollbar-thumb {
     background-color: dark-gray;
   }
   
@@ -3960,4 +3959,3 @@
             background-color: #095E54;
             color: rgba(255, 255, 255, 1);
         }
-
