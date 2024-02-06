@@ -3343,6 +3343,10 @@ details > p {
   width: 100%;
 }
 
+.builder-main-layout.builder {
+  overflow: visible;
+}
+
 .code-generator {
   width: 100%;
   height: 98%;
