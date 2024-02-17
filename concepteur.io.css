@@ -3012,6 +3012,7 @@ a {
 
 .carousel > .builder-selector,
 .list > .builder-selector,
+.custom > .builder-selector,
 .tableau > .builder-selector {
   background-color: rgb(255, 80, 223) !important;
   color: white !important;
@@ -3022,17 +3023,20 @@ a {
 }
 .carousel.draggable.active,
 .list.draggable.active,
+.custom.draggable.active,
 .tableau.draggable.active {
   outline: 2px solid rgb(255, 80, 223) !important;
 }
 .carousel.draggable.active > .builder-selector,
 .list.draggable.active > .builder-selector,
+.custom.draggable.active > .builder-selector,
 .tableau.draggable.active > .builder-selector {
   display: flex;
   width: fit-content;
 }
 .carousel.draggable.active + .builder-type,
 .list.draggable.active + .builder-type,
+.custom.draggable.active + .builder-type,
 .tableau.draggable.active + .builder-type {
   display: flex;
   background-color: rgb(255, 80, 223);
@@ -3040,17 +3044,20 @@ a {
 }
 .carousel.draggable:hover,
 .list.draggable:hover,
+.custom.draggable:hover,
 .tableau.draggable:hover {
   outline: 1px solid rgb(255, 80, 223) !important;
 }
 .carousel.draggable:hover > .builder-selector,
 .list.draggable:hover > .builder-selector,
+.custom.draggable:hover > .builder-selector,
 .tableau.draggable:hover > .builder-selector {
   display: flex;
   width: fit-content;
 }
 .carousel.draggable:hover + .builder-type,
 .list.draggable:hover + .builder-type,
+.custom.draggable:hover + .builder-type,
 .tableau.draggable:hover + .builder-type {
   display: flex;
   background-color: rgb(255, 80, 223);
@@ -3128,6 +3135,13 @@ a {
 }
 .builder .navbar > div > .content {
   height: initial !important;
+}
+
+.builder .navbar {
+  flex-direction: initial;
+}
+.builder .navbar > .main_preview {
+  width: initial;
 }
 
 .builder-main-sideBar .sideBar {
@@ -3840,6 +3854,34 @@ img {
   padding: 5px;
 }
 
+.video-background {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.video-background iframe {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100vw;
+  height: 100vh;
+  transform: translate(-50%, -50%);
+}
+
+@media (min-aspect-ratio: 16/9) {
+  .video-background iframe {
+    /* height = 100 * (9 / 16) = 56.25 */
+    height: 56.25vw;
+  }
+}
+@media (max-aspect-ratio: 16/9) {
+  .video-background iframe {
+    /* width = 100 / (9 / 16) = 177.777777 */
+    width: 177.78vh;
+  }
+}
 /******************************************************************/
 /************ MARGIN AND PADDING **********************************/
 /******************************************************************/
@@ -4423,4 +4465,136 @@ img {
   --tw-shadow-color: rgba(0,0,0,.3);
   --tw-shadow: var(--tw-shadow-colored);
   cursor: pointer;
+}
+
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carouselwrapper {
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel {
+  margin: 0 0 0 var(--carouselLeftMargin);
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+}
+
+.carousel-prev {
+  animation-duration: 0.6s;
+  animation-timing-function: cubic-bezier(0.83, 0, 0.17, 1);
+  animation-name: prev;
+}
+
+.carousel-next {
+  animation-duration: 0.6s;
+  animation-timing-function: cubic-bezier(0.83, 0, 0.17, 1);
+  animation-name: next;
+}
+
+.carousel-li {
+  padding-bottom: 10px;
+  text-align: center;
+  width: 80;
+  box-sizing: border-box;
+}
+
+.carousel-bg-img {
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  position: relative;
+  height: 80px;
+  margin: auto;
+}
+
+.carousel-logo-img {
+  position: absolute;
+  top: 65%;
+  left: 50px;
+}
+
+.carousel-card-outline {
+  font-size: 12px;
+  letter-spacing: 0px;
+  color: #EC642B;
+  text-decoration: none;
+}
+
+.ui {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 10;
+  z-index: 100;
+}
+
+.carousel-button {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  color: #111;
+  box-shadow: 0px 3px 6px rgba(206, 206, 247, 0.7019607843);
+  border: 1px solid rgba(90, 86, 149, 0.2);
+  transition: all 0.2s cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+
+.carousel-button:hover {
+  border: 1px solid #dedede;
+}
+
+.carousel-button:focus {
+  outline: none;
+  border: 1px solid #dedede;
+}
+
+.carousel-card {
+  border: 1px solid #DDDCE9;
+  border-radius: 16px;
+  margin: 10;
+  background: var(--color-white);
+}
+
+.carousel-p {
+  font-family: "Open Sans Condensed", sans-serif;
+  font-size: 1.4rem;
+  margin-bottom: 0;
+}
+
+/* Card image */
+.carousel-card-img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  /* Center the image */
+}
+
+/* Card text */
+.carousel-card-text {
+  color: #5a5695;
+  font-size: 12px;
+  padding: 0px 10px;
+}
+
+/* Card button */
+.carousel-card-button {
+  color: #ec642b;
+  cursor: pointer;
+  border: none;
+  background-color: #fff;
+  font-size: 14px;
+  text-decoration: none;
 }
