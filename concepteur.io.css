@@ -2900,6 +2900,7 @@ a {
 .builder-main-sideBar .sideBar,
 .bottomNavbar,
 .carousel,
+.folder,
 .list,
 .tableau {
   height: inherit;
@@ -2912,6 +2913,7 @@ a {
 .builder-main-sideBar .sideBar.draggable:hover,
 .bottomNavbar.draggable:hover,
 .carousel.draggable:hover,
+.folder.draggable:hover,
 .list.draggable:hover,
 .tableau.draggable:hover {
   outline: 1px solid rgba(64, 10, 151, 0.644) !important;
@@ -2924,6 +2926,7 @@ a {
 .builder-main-sideBar .sideBar.draggable:hover > div > .content > div > .section,
 .bottomNavbar.draggable:hover > div > .content > div > .section,
 .carousel.draggable:hover > div > .content > div > .section,
+.folder.draggable:hover > div > .content > div > .section,
 .list.draggable:hover > div > .content > div > .section,
 .tableau.draggable:hover > div > .content > div > .section {
   outline: 1px dashed rgb(10, 151, 17);
@@ -2935,6 +2938,7 @@ a {
 .builder-main-sideBar .sideBar.draggable:hover > div > .content > div > .column,
 .bottomNavbar.draggable:hover > div > .content > div > .column,
 .carousel.draggable:hover > div > .content > div > .column,
+.folder.draggable:hover > div > .content > div > .column,
 .list.draggable:hover > div > .content > div > .column,
 .tableau.draggable:hover > div > .content > div > .column {
   outline: 1px dashed rgb(238, 204, 204);
@@ -2946,6 +2950,7 @@ a {
 .builder-main-sideBar .sideBar.draggable:hover > div > .content > div > .grid,
 .bottomNavbar.draggable:hover > div > .content > div > .grid,
 .carousel.draggable:hover > div > .content > div > .grid,
+.folder.draggable:hover > div > .content > div > .grid,
 .list.draggable:hover > div > .content > div > .grid,
 .tableau.draggable:hover > div > .content > div > .grid {
   outline: 1px dashed rgb(238, 204, 204);
@@ -2957,6 +2962,7 @@ a {
 .builder-main-sideBar .sideBar.draggable:hover > div > .content > div > .component,
 .bottomNavbar.draggable:hover > div > .content > div > .component,
 .carousel.draggable:hover > div > .content > div > .component,
+.folder.draggable:hover > div > .content > div > .component,
 .list.draggable:hover > div > .content > div > .component,
 .tableau.draggable:hover > div > .content > div > .component {
   outline: 1px dashed rgba(0, 0, 0, 0.479);
@@ -2968,6 +2974,7 @@ a {
 .builder-main-sideBar .sideBar.draggable.active,
 .bottomNavbar.draggable.active,
 .carousel.draggable.active,
+.folder.draggable.active,
 .list.draggable.active,
 .tableau.draggable.active {
   outline: 2px solid rgba(64, 10, 151, 0.644) !important;
@@ -2980,6 +2987,7 @@ a {
 .builder-main-sideBar .sideBar.draggable.active > .dragHandle,
 .bottomNavbar.draggable.active > .dragHandle,
 .carousel.draggable.active > .dragHandle,
+.folder.draggable.active > .dragHandle,
 .list.draggable.active > .dragHandle,
 .tableau.draggable.active > .dragHandle {
   display: block;
@@ -2994,6 +3002,7 @@ a {
 .builder-main-sideBar .sideBar:hover > div > .dropZone.horizontalDrag,
 .bottomNavbar:hover > div > .dropZone.horizontalDrag,
 .carousel:hover > div > .dropZone.horizontalDrag,
+.folder:hover > div > .dropZone.horizontalDrag,
 .list:hover > div > .dropZone.horizontalDrag,
 .tableau:hover > div > .dropZone.horizontalDrag {
   display: none;
@@ -3005,12 +3014,14 @@ a {
 .builder-main-sideBar .sideBar + .builder-type,
 .bottomNavbar + .builder-type,
 .carousel + .builder-type,
+.folder + .builder-type,
 .list + .builder-type,
 .tableau + .builder-type {
   background-color: rgba(64, 10, 151, 0.644);
 }
 
 .carousel > .builder-selector,
+.folder > .builder-selector,
 .list > .builder-selector,
 .custom > .builder-selector,
 .tableau > .builder-selector {
@@ -3022,12 +3033,14 @@ a {
   top: -28px;
 }
 .carousel.draggable.active,
+.folder.draggable.active,
 .list.draggable.active,
 .custom.draggable.active,
 .tableau.draggable.active {
   outline: 2px solid rgb(255, 80, 223) !important;
 }
 .carousel.draggable.active > .builder-selector,
+.folder.draggable.active > .builder-selector,
 .list.draggable.active > .builder-selector,
 .custom.draggable.active > .builder-selector,
 .tableau.draggable.active > .builder-selector {
@@ -3035,6 +3048,7 @@ a {
   width: fit-content;
 }
 .carousel.draggable.active + .builder-type,
+.folder.draggable.active + .builder-type,
 .list.draggable.active + .builder-type,
 .custom.draggable.active + .builder-type,
 .tableau.draggable.active + .builder-type {
@@ -3043,12 +3057,14 @@ a {
   width: fit-content;
 }
 .carousel.draggable:hover,
+.folder.draggable:hover,
 .list.draggable:hover,
 .custom.draggable:hover,
 .tableau.draggable:hover {
   outline: 1px solid rgb(255, 80, 223) !important;
 }
 .carousel.draggable:hover > .builder-selector,
+.folder.draggable:hover > .builder-selector,
 .list.draggable:hover > .builder-selector,
 .custom.draggable:hover > .builder-selector,
 .tableau.draggable:hover > .builder-selector {
@@ -3056,6 +3072,7 @@ a {
   width: fit-content;
 }
 .carousel.draggable:hover + .builder-type,
+.folder.draggable:hover + .builder-type,
 .list.draggable:hover + .builder-type,
 .custom.draggable:hover + .builder-type,
 .tableau.draggable:hover + .builder-type {
@@ -4329,6 +4346,10 @@ img {
 
 .MuiGrid-root {
   color: unset;
+}
+
+.MuiAutocomplete-popper {
+  z-index: 4000 !important;
 }
 
 .button-scroll {
