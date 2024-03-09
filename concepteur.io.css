@@ -3099,6 +3099,7 @@ a {
 
 .list {
   -webkit-overflow-scrolling: touch;
+  min-height: 10px;
 }
 .list::-webkit-scrollbar {
   display: none;
@@ -3108,10 +3109,6 @@ a {
 }
 .list.preview > div {
   display: inline-table;
-}
-.list > div {
-  overflow-x: auto;
-  overflow-y: hidden;
 }
 .list > div::-webkit-scrollbar {
   display: none;
@@ -3139,6 +3136,11 @@ a {
 .navbar.sm,
 .bottomNavbar.sm {
   padding: 0px;
+}
+
+.modules {
+  min-height: 20px;
+  min-width: 200px;
 }
 
 .builder .navbar {
@@ -3435,7 +3437,7 @@ details > p {
   bottom: 0px;
   right: 0px;
   height: 100vh;
-  z-index: 1500;
+  z-index: 2500;
   background-color: rgba(0, 0, 0, 0.575);
   justify-content: center;
   overflow: auto;
@@ -3461,7 +3463,12 @@ details > p {
   padding: 30px;
 }
 
+.popup-builder-custom {
+  position: fixed;
+}
+
 .popup-builder .popup-section {
+  background-color: white;
   display: flex;
   align-items: center;
   justify-items: center;
