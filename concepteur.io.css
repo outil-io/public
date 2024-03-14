@@ -2668,13 +2668,6 @@ a {
   flex-wrap: wrap;
 }
 
-.page,
-.navbar,
-.footer,
-.sideBar {
-  align-items: baseline;
-}
-
 .nvb,
 .sb {
   flex-direction: column;
