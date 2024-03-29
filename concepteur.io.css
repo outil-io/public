@@ -4347,8 +4347,6 @@ img {
 }
 
 .text-render {
-  white-space: pre-wrap;
-  word-wrap: break-word;
   word-break: normal;
 }
 .text-render p {
