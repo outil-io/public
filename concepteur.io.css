@@ -3573,6 +3573,14 @@ details > p {
   vertical-align: middle;
 }
 
+.left-right-nowrap {
+  justify-content: space-between;
+  display: flex;
+  vertical-align: middle;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
 /**********************************************************************************/
 .flex-end {
   align-self: flex-end;
