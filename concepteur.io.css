@@ -3538,10 +3538,12 @@ details > p {
   top: 0;
   position: absolute !important;
   height: 100%;
+  z-index: 9999;
 }
 
 .builder-main-sideBar {
   width: fit-content;
+  z-index: 9999 !important;
 }
 .builder-main-sideBar > div {
   height: inherit;
