@@ -2529,6 +2529,10 @@ a {
   z-index: 0;
 }
 
+.leftsidebar, .rightsidebar {
+  overflow-y: auto;
+}
+
 .row {
   --bs-gutter-x: 0;
 }
