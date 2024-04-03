@@ -3165,9 +3165,16 @@ a {
   padding: 0px;
 }
 
+.main_modules {
+  min-height: 20px;
+  min-width: 200px;
+  width: 100%;
+}
+
 .modules {
   min-height: 20px;
   min-width: 200px;
+  width: 100%;
 }
 
 .builder .navbar {
