@@ -2463,7 +2463,8 @@ a {
 .footer,
 .horizontalTab,
 .bottomNavbar {
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: hidden;
   outline-offset: -2px;
   background-color: transparent;
 }
