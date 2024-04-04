@@ -3803,11 +3803,15 @@ details > p {
   padding: 0px !important;
 }
 
-.pct > img {
+.pct > img, .image {
   max-width: 100%;
   height: fit-content;
   object-fit: contain;
   object-position: center;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  overflow: hidden;
 }
 
 img {
