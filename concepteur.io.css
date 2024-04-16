@@ -4403,7 +4403,7 @@ img {
 }
 
 .text-render {
-  word-break: normal;
+  word-wrap: break-word;
 }
 .text-render p {
   margin: 0;
