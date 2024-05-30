@@ -2460,6 +2460,7 @@ a {
 .leftsidebar,
 .rightsidebar,
 .navbar,
+.header,
 .footer,
 .horizontalTab,
 .bottomNavbar {
@@ -2477,6 +2478,7 @@ a {
 .leftsidebar .horizontalDrag.left,
 .rightsidebar .horizontalDrag.left,
 .navbar .horizontalDrag.left,
+.header .horizontalDrag.left,
 .footer .horizontalDrag.left,
 .horizontalTab .horizontalDrag.left,
 .bottomNavbar .horizontalDrag.left {
@@ -2491,6 +2493,7 @@ a {
 .leftsidebar .horizontalDrag.right,
 .rightsidebar .horizontalDrag.right,
 .navbar .horizontalDrag.right,
+.header .horizontalDrag.right,
 .footer .horizontalDrag.right,
 .horizontalTab .horizontalDrag.right,
 .bottomNavbar .horizontalDrag.right {
@@ -2510,6 +2513,7 @@ a {
 .leftsidebar .clickable,
 .rightsidebar .clickable,
 .navbar .clickable,
+.header .clickable,
 .footer .clickable,
 .horizontalTab .clickable,
 .bottomNavbar .clickable {
@@ -2524,6 +2528,7 @@ a {
 .leftsidebar:hover .dropZone.horizontalDrag,
 .rightsidebar:hover .dropZone.horizontalDrag,
 .navbar:hover .dropZone.horizontalDrag,
+.header:hover .dropZone.horizontalDrag,
 .footer:hover .dropZone.horizontalDrag,
 .horizontalTab:hover .dropZone.horizontalDrag,
 .bottomNavbar:hover .dropZone.horizontalDrag {
@@ -2683,7 +2688,6 @@ a {
   flex-wrap: wrap;
 }
 
-.nvb,
 .sb {
   flex-direction: column;
 }
@@ -2903,6 +2907,7 @@ a {
 
 .page,
 .navbar,
+.header,
 .footer,
 .popup,
 .builder-main-sideBar .sideBar,
@@ -2918,6 +2923,7 @@ a {
 }
 .page.draggable:hover,
 .navbar.draggable:hover,
+.header.draggable:hover,
 .footer.draggable:hover,
 .popup.draggable:hover,
 .builder-main-sideBar .sideBar.draggable:hover,
@@ -2933,6 +2939,7 @@ a {
 }
 .page.draggable:hover > div > .content > div > .section,
 .navbar.draggable:hover > div > .content > div > .section,
+.header.draggable:hover > div > .content > div > .section,
 .footer.draggable:hover > div > .content > div > .section,
 .popup.draggable:hover > div > .content > div > .section,
 .builder-main-sideBar .sideBar.draggable:hover > div > .content > div > .section,
@@ -2947,6 +2954,7 @@ a {
 }
 .page.draggable:hover > div > .content > div > .column,
 .navbar.draggable:hover > div > .content > div > .column,
+.header.draggable:hover > div > .content > div > .column,
 .footer.draggable:hover > div > .content > div > .column,
 .popup.draggable:hover > div > .content > div > .column,
 .builder-main-sideBar .sideBar.draggable:hover > div > .content > div > .column,
@@ -2961,6 +2969,7 @@ a {
 }
 .page.draggable:hover > div > .content > div > .grid,
 .navbar.draggable:hover > div > .content > div > .grid,
+.header.draggable:hover > div > .content > div > .grid,
 .footer.draggable:hover > div > .content > div > .grid,
 .popup.draggable:hover > div > .content > div > .grid,
 .builder-main-sideBar .sideBar.draggable:hover > div > .content > div > .grid,
@@ -2975,6 +2984,7 @@ a {
 }
 .page.draggable:hover > div > .content > div > .component,
 .navbar.draggable:hover > div > .content > div > .component,
+.header.draggable:hover > div > .content > div > .component,
 .footer.draggable:hover > div > .content > div > .component,
 .popup.draggable:hover > div > .content > div > .component,
 .builder-main-sideBar .sideBar.draggable:hover > div > .content > div > .component,
@@ -2989,6 +2999,7 @@ a {
 }
 .page.draggable.active,
 .navbar.draggable.active,
+.header.draggable.active,
 .footer.draggable.active,
 .popup.draggable.active,
 .builder-main-sideBar .sideBar.draggable.active,
@@ -3004,6 +3015,7 @@ a {
 }
 .page.draggable.active > .dragHandle,
 .navbar.draggable.active > .dragHandle,
+.header.draggable.active > .dragHandle,
 .footer.draggable.active > .dragHandle,
 .popup.draggable.active > .dragHandle,
 .builder-main-sideBar .sideBar.draggable.active > .dragHandle,
@@ -3021,6 +3033,7 @@ a {
 }
 .page:hover > div > .dropZone.horizontalDrag,
 .navbar:hover > div > .dropZone.horizontalDrag,
+.header:hover > div > .dropZone.horizontalDrag,
 .footer:hover > div > .dropZone.horizontalDrag,
 .popup:hover > div > .dropZone.horizontalDrag,
 .builder-main-sideBar .sideBar:hover > div > .dropZone.horizontalDrag,
@@ -3035,6 +3048,7 @@ a {
 }
 .page + .builder-type,
 .navbar + .builder-type,
+.header + .builder-type,
 .footer + .builder-type,
 .popup + .builder-type,
 .builder-main-sideBar .sideBar + .builder-type,
@@ -3156,12 +3170,14 @@ a {
 }
 
 .navbar,
+.header,
 .bottomNavbar {
   width: 100%;
   overflow: visible;
   padding: 0px;
 }
 .navbar.sm,
+.header.sm,
 .bottomNavbar.sm {
   padding: 0px;
 }
@@ -3178,23 +3194,23 @@ a {
   width: 100%;
 }
 
-.builder .navbar {
+.builder .navbar, .builder .header {
   display: flex;
   align-items: center;
   display: flex;
   flex-direction: column;
 }
-.builder .navbar > div {
+.builder .navbar > div, .builder .header > div {
   width: 100%;
 }
-.builder .navbar > div > .content {
+.builder .navbar > div > .content, .builder .header > div > .content {
   height: initial !important;
 }
 
-.builder .navbar {
+.builder .navbar, .builder .header {
   flex-direction: initial;
 }
-.builder .navbar > .main_preview {
+.builder .navbar > .main_preview, .builder .header > .main_preview {
   width: initial;
 }
 
@@ -3254,6 +3270,10 @@ a {
 .MuiGrid-root,
 .MuiGrid-item {
   background-color: transparent;
+}
+
+.MuiMenu-root {
+  z-index: 3500 !important;
 }
 
 .preview-result {
@@ -3577,7 +3597,7 @@ details > p {
   width: 100%;
 }
 .builder-main-body > div {
-  height: inherit !important;
+  height: inherit;
 }
 
 .builder-main-header {
@@ -3820,6 +3840,7 @@ img {
   height: auto;
   object-fit: cover;
   object-position: center;
+  height: fit-content;
 }
 
 .row img {
