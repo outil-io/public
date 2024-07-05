@@ -2586,6 +2586,11 @@ a {
   overflow: hidden;
 }
 
+.video {
+  min-height: 100px;
+  min-width: 200px;
+}
+
 .dropZone.horizontalDrag-right {
   position: absolute;
   width: 100%;
@@ -3210,10 +3215,6 @@ a {
 .builder .navbar, .builder .header {
   flex-direction: initial;
 }
-.builder .navbar > .main_preview, .builder .header > .main_preview {
-  width: initial;
-}
-
 .builder-main-sideBar .sideBar {
   justify-content: flex-start;
   align-items: flex-start;
