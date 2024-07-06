@@ -2922,6 +2922,7 @@ a {
 .carousel,
 .folder,
 .list,
+.modules,
 .tableau {
   height: inherit;
   background-color: transparent;
@@ -2938,6 +2939,7 @@ a {
 .carousel.draggable:hover,
 .folder.draggable:hover,
 .list.draggable:hover,
+.modules.draggable:hover,
 .tableau.draggable:hover {
   outline: 1px solid rgba(64, 10, 151, 0.644) !important;
   overflow: visible;
@@ -2954,6 +2956,7 @@ a {
 .carousel.draggable:hover > div > .content > div > .section,
 .folder.draggable:hover > div > .content > div > .section,
 .list.draggable:hover > div > .content > div > .section,
+.modules.draggable:hover > div > .content > div > .section,
 .tableau.draggable:hover > div > .content > div > .section {
   outline: 1px dashed rgb(10, 151, 17);
 }
@@ -2969,6 +2972,7 @@ a {
 .carousel.draggable:hover > div > .content > div > .column,
 .folder.draggable:hover > div > .content > div > .column,
 .list.draggable:hover > div > .content > div > .column,
+.modules.draggable:hover > div > .content > div > .column,
 .tableau.draggable:hover > div > .content > div > .column {
   outline: 1px dashed rgb(238, 204, 204);
 }
@@ -2984,6 +2988,7 @@ a {
 .carousel.draggable:hover > div > .content > div > .grid,
 .folder.draggable:hover > div > .content > div > .grid,
 .list.draggable:hover > div > .content > div > .grid,
+.modules.draggable:hover > div > .content > div > .grid,
 .tableau.draggable:hover > div > .content > div > .grid {
   outline: 1px dashed rgb(238, 204, 204);
 }
@@ -2999,6 +3004,7 @@ a {
 .carousel.draggable:hover > div > .content > div > .component,
 .folder.draggable:hover > div > .content > div > .component,
 .list.draggable:hover > div > .content > div > .component,
+.modules.draggable:hover > div > .content > div > .component,
 .tableau.draggable:hover > div > .content > div > .component {
   outline: 1px dashed rgba(0, 0, 0, 0.479);
 }
@@ -3014,6 +3020,7 @@ a {
 .carousel.draggable.active,
 .folder.draggable.active,
 .list.draggable.active,
+.modules.draggable.active,
 .tableau.draggable.active {
   outline: 2px solid rgba(64, 10, 151, 0.644) !important;
   z-index: 3;
@@ -3030,6 +3037,7 @@ a {
 .carousel.draggable.active > .dragHandle,
 .folder.draggable.active > .dragHandle,
 .list.draggable.active > .dragHandle,
+.modules.draggable.active > .dragHandle,
 .tableau.draggable.active > .dragHandle {
   display: block;
   background-color: rgba(64, 10, 151, 0.644);
@@ -3048,6 +3056,7 @@ a {
 .carousel:hover > div > .dropZone.horizontalDrag,
 .folder:hover > div > .dropZone.horizontalDrag,
 .list:hover > div > .dropZone.horizontalDrag,
+.modules:hover > div > .dropZone.horizontalDrag,
 .tableau:hover > div > .dropZone.horizontalDrag {
   display: none;
 }
@@ -3063,6 +3072,7 @@ a {
 .carousel + .builder-type,
 .folder + .builder-type,
 .list + .builder-type,
+.modules + .builder-type,
 .tableau + .builder-type {
   background-color: rgba(64, 10, 151, 0.644);
 }
@@ -3071,7 +3081,8 @@ a {
 .folder > .builder-selector,
 .list > .builder-selector,
 .custom > .builder-selector,
-.tableau > .builder-selector {
+.tableau > .builder-selector,
+.modules > .builder-selector {
   background-color: rgb(255, 80, 223) !important;
   color: white !important;
   position: absolute;
@@ -3083,14 +3094,16 @@ a {
 .folder.draggable.active,
 .list.draggable.active,
 .custom.draggable.active,
-.tableau.draggable.active {
+.tableau.draggable.active,
+.modules.draggable.active {
   outline: 2px solid rgb(255, 80, 223) !important;
 }
 .carousel.draggable.active > .builder-selector,
 .folder.draggable.active > .builder-selector,
 .list.draggable.active > .builder-selector,
 .custom.draggable.active > .builder-selector,
-.tableau.draggable.active > .builder-selector {
+.tableau.draggable.active > .builder-selector,
+.modules.draggable.active > .builder-selector {
   display: flex;
   width: fit-content;
 }
@@ -3098,7 +3111,8 @@ a {
 .folder.draggable.active + .builder-type,
 .list.draggable.active + .builder-type,
 .custom.draggable.active + .builder-type,
-.tableau.draggable.active + .builder-type {
+.tableau.draggable.active + .builder-type,
+.modules.draggable.active + .builder-type {
   display: flex;
   background-color: rgb(255, 80, 223);
   width: fit-content;
@@ -3107,14 +3121,16 @@ a {
 .folder.draggable:hover,
 .list.draggable:hover,
 .custom.draggable:hover,
-.tableau.draggable:hover {
+.tableau.draggable:hover,
+.modules.draggable:hover {
   outline: 1px solid rgb(255, 80, 223) !important;
 }
 .carousel.draggable:hover > .builder-selector,
 .folder.draggable:hover > .builder-selector,
 .list.draggable:hover > .builder-selector,
 .custom.draggable:hover > .builder-selector,
-.tableau.draggable:hover > .builder-selector {
+.tableau.draggable:hover > .builder-selector,
+.modules.draggable:hover > .builder-selector {
   display: flex;
   width: fit-content;
 }
@@ -3122,7 +3138,8 @@ a {
 .folder.draggable:hover + .builder-type,
 .list.draggable:hover + .builder-type,
 .custom.draggable:hover + .builder-type,
-.tableau.draggable:hover + .builder-type {
+.tableau.draggable:hover + .builder-type,
+.modules.draggable:hover + .builder-type {
   display: flex;
   background-color: rgb(255, 80, 223);
 }
@@ -3215,6 +3232,7 @@ a {
 .builder .navbar, .builder .header {
   flex-direction: initial;
 }
+
 .builder-main-sideBar .sideBar {
   justify-content: flex-start;
   align-items: flex-start;
