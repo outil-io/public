@@ -787,120 +787,6 @@ progress {
     width: 100%;
   }
 }
-@media (min-width: 1200px) {
-  .col-xl {
-    flex: 1 0 0%;
-  }
-  .col-xl-auto {
-    flex: 0 0 auto;
-    width: auto;
-  }
-  .col-xl-1 {
-    flex: 0 0 auto;
-    width: 8.33333333%;
-  }
-  .col-xl-2 {
-    flex: 0 0 auto;
-    width: 16.66666667%;
-  }
-  .col-xl-3 {
-    flex: 0 0 auto;
-    width: 25%;
-  }
-  .col-xl-4 {
-    flex: 0 0 auto;
-    width: 33.33333333%;
-  }
-  .col-xl-5 {
-    flex: 0 0 auto;
-    width: 41.66666667%;
-  }
-  .col-xl-6 {
-    flex: 0 0 auto;
-    width: 50%;
-  }
-  .col-xl-7 {
-    flex: 0 0 auto;
-    width: 58.33333333%;
-  }
-  .col-xl-8 {
-    flex: 0 0 auto;
-    width: 66.66666667%;
-  }
-  .col-xl-9 {
-    flex: 0 0 auto;
-    width: 75%;
-  }
-  .col-xl-10 {
-    flex: 0 0 auto;
-    width: 83.33333333%;
-  }
-  .col-xl-11 {
-    flex: 0 0 auto;
-    width: 91.66666667%;
-  }
-  .col-xl-12 {
-    flex: 0 0 auto;
-    width: 100%;
-  }
-}
-@media (min-width: 1400px) {
-  .col-xxl {
-    flex: 1 0 0%;
-  }
-  .col-xxl-auto {
-    flex: 0 0 auto;
-    width: auto;
-  }
-  .col-xxl-1 {
-    flex: 0 0 auto;
-    width: 8.33333333%;
-  }
-  .col-xxl-2 {
-    flex: 0 0 auto;
-    width: 16.66666667%;
-  }
-  .col-xxl-3 {
-    flex: 0 0 auto;
-    width: 25%;
-  }
-  .col-xxl-4 {
-    flex: 0 0 auto;
-    width: 33.33333333%;
-  }
-  .col-xxl-5 {
-    flex: 0 0 auto;
-    width: 41.66666667%;
-  }
-  .col-xxl-6 {
-    flex: 0 0 auto;
-    width: 50%;
-  }
-  .col-xxl-7 {
-    flex: 0 0 auto;
-    width: 58.33333333%;
-  }
-  .col-xxl-8 {
-    flex: 0 0 auto;
-    width: 66.66666667%;
-  }
-  .col-xxl-9 {
-    flex: 0 0 auto;
-    width: 75%;
-  }
-  .col-xxl-10 {
-    flex: 0 0 auto;
-    width: 83.33333333%;
-  }
-  .col-xxl-11 {
-    flex: 0 0 auto;
-    width: 91.66666667%;
-  }
-  .col-xxl-12 {
-    flex: 0 0 auto;
-    width: 100%;
-  }
-}
 .table {
   --bs-table-bg: transparent;
   --bs-table-accent-bg: transparent;
@@ -1177,11 +1063,25 @@ progress {
 }
 
 .flex-wrap {
+  display: flex;
   flex-wrap: wrap !important;
 }
 
 .flex-nowrap {
+  display: flex;
   flex-wrap: nowrap !important;
+}
+
+.y-center {
+  align-items: center;
+}
+
+.x-center {
+  justify-content: center;
+}
+
+.x-space {
+  justify-content: space-between;
 }
 
 .flex-wrap-reverse {
@@ -2427,6 +2327,7 @@ a {
   color: white;
   text-align: center;
   padding: 5px;
+  font-size: 10px !important;
 }
 .builder-type i,
 .builder-selector i {
@@ -2729,6 +2630,9 @@ a {
 .component.draggable:hover > div > .content > div > .component {
   outline: 1px dashed rgba(0, 0, 0, 0.479);
 }
+.component.draggable:hover > .builder-selector {
+  display: flex;
+}
 .component.draggable.active {
   outline: 2px solid black !important;
   z-index: 103;
@@ -2744,9 +2648,9 @@ a {
   background-color: transparent;
 }
 .column > .builder-selector {
-  top: -27px;
+  top: -23px;
   left: calc(100% - 60px);
-  height: 20px;
+  height: 15px;
   background-color: rgb(230, 24, 24) !important;
 }
 .column.draggable:hover {
@@ -2791,9 +2695,9 @@ a {
 }
 .grid > .builder-selector,
 .horizontalTab > .builder-selector {
-  bottom: -20px;
+  bottom: -14px;
   left: calc(100% - 40px);
-  height: 20px;
+  height: 15px;
   background-color: rgb(12, 152, 207);
 }
 .grid.draggable:hover,
@@ -2856,10 +2760,10 @@ a {
   padding: 5px;
 }
 .section > .builder-selector {
-  top: 6px;
+  top: 4px;
   left: calc(100% - 32px);
-  width: 50px;
-  height: 15px;
+  width: 43px;
+  height: 16px;
   transform: rotate(90deg);
   background-color: rgb(10, 151, 17);
 }
@@ -3082,20 +2986,22 @@ a {
 .list > .builder-selector,
 .custom > .builder-selector,
 .tableau > .builder-selector,
-.modules > .builder-selector {
+.modules > .builder-selector,
+.component > .builder-selector {
   background-color: rgb(255, 80, 223) !important;
   color: white !important;
   position: absolute;
-  height: 20px;
+  height: 15px;
   padding: 0px 5px;
-  top: -28px;
+  top: -23px;
 }
 .carousel.draggable.active,
 .folder.draggable.active,
 .list.draggable.active,
 .custom.draggable.active,
 .tableau.draggable.active,
-.modules.draggable.active {
+.modules.draggable.active,
+.component.draggable.active {
   outline: 2px solid rgb(255, 80, 223) !important;
 }
 .carousel.draggable.active > .builder-selector,
@@ -3103,7 +3009,8 @@ a {
 .list.draggable.active > .builder-selector,
 .custom.draggable.active > .builder-selector,
 .tableau.draggable.active > .builder-selector,
-.modules.draggable.active > .builder-selector {
+.modules.draggable.active > .builder-selector,
+.component.draggable.active > .builder-selector {
   display: flex;
   width: fit-content;
 }
@@ -3112,7 +3019,8 @@ a {
 .list.draggable.active + .builder-type,
 .custom.draggable.active + .builder-type,
 .tableau.draggable.active + .builder-type,
-.modules.draggable.active + .builder-type {
+.modules.draggable.active + .builder-type,
+.component.draggable.active + .builder-type {
   display: flex;
   background-color: rgb(255, 80, 223);
   width: fit-content;
@@ -3122,7 +3030,8 @@ a {
 .list.draggable:hover,
 .custom.draggable:hover,
 .tableau.draggable:hover,
-.modules.draggable:hover {
+.modules.draggable:hover,
+.component.draggable:hover {
   outline: 1px solid rgb(255, 80, 223) !important;
 }
 .carousel.draggable:hover > .builder-selector,
@@ -3130,7 +3039,8 @@ a {
 .list.draggable:hover > .builder-selector,
 .custom.draggable:hover > .builder-selector,
 .tableau.draggable:hover > .builder-selector,
-.modules.draggable:hover > .builder-selector {
+.modules.draggable:hover > .builder-selector,
+.component.draggable:hover > .builder-selector {
   display: flex;
   width: fit-content;
 }
@@ -3139,9 +3049,38 @@ a {
 .list.draggable:hover + .builder-type,
 .custom.draggable:hover + .builder-type,
 .tableau.draggable:hover + .builder-type,
-.modules.draggable:hover + .builder-type {
+.modules.draggable:hover + .builder-type,
+.component.draggable:hover + .builder-type {
   display: flex;
   background-color: rgb(255, 80, 223);
+}
+
+.component > .builder-selector {
+  background-color: black !important;
+  color: white !important;
+  position: absolute;
+  height: 15px;
+  padding: 0px 5px;
+  top: -23px;
+}
+.component.draggable:hover {
+  outline: 1px solid black !important;
+}
+.component.draggable:hover + .builder-type {
+  display: flex;
+  background-color: black;
+}
+.component.draggable.active {
+  outline: 2px solid black !important;
+}
+.component.draggable.active > .builder-selector {
+  display: flex;
+  width: fit-content;
+}
+.component.draggable.active + .builder-type {
+  display: flex;
+  background-color: black;
+  width: fit-content;
 }
 
 .div_tableau {
@@ -3984,6 +3923,36 @@ img {
     width: 177.78vh;
   }
 }
+/**************/
+/** Star Rating ***/
+/******************/
+.star-rating {
+  display: flex;
+  flex-direction: row-reverse;
+  font-size: 1.5em;
+  justify-content: space-around;
+  padding: 0 0.2em;
+  text-align: center;
+  width: 5em;
+}
+
+.star-rating input {
+  display: none;
+}
+
+.star-rating label {
+  cursor: pointer;
+}
+
+.star-rating :checked ~ label {
+  color: #f90;
+}
+
+.star-rating label:hover,
+.star-rating label:hover ~ label {
+  color: #fc0;
+}
+
 /******************************************************************/
 /************ MARGIN AND PADDING **********************************/
 /******************************************************************/
