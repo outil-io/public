@@ -4566,6 +4566,23 @@ img {
   cursor: pointer;
 }
 
+.txt-editor i {
+  width: 25px;
+  height: 25px;
+  border: 1px solid black;
+  padding: 5px;
+  font-size: 14px;
+  margin: 5px;
+}
+.txt-editor i:hover {
+  background-color: black;
+  color: white;
+}
+.txt-editor i.active {
+  background-color: black;
+  color: white;
+}
+
 .each-slide-effect {
   height: inherit;
 }
