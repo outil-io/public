@@ -2605,7 +2605,6 @@ a {
 .component {
   min-height: 20px;
   padding: 0px 0px;
-  text-align: left;
   vertical-align: middle;
   min-height: fit-content;
   background-color: transparent;
@@ -4581,6 +4580,13 @@ img {
 .txt-editor i.active {
   background-color: black;
   color: white;
+}
+
+.renderInput.textfield i {
+  display: none;
+}
+.renderInput.textfield:hover i {
+  display: flex;
 }
 
 .each-slide-effect {
