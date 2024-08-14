@@ -3541,6 +3541,10 @@ details > p {
   height: inherit;
 }
 
+.builder-main-sideBar.panier {
+  z-index: 5000 !important;
+}
+
 .builder-main-content {
   display: flex;
   flex-direction: row;
