@@ -2420,6 +2420,21 @@ a {
 .bottomNavbar .clickable {
   cursor: pointer;
 }
+.component:hover,
+.column:hover,
+.grid:hover,
+.section:hover,
+.page:hover,
+.sideBar:hover,
+.leftsidebar:hover,
+.rightsidebar:hover,
+.navbar:hover,
+.header:hover,
+.footer:hover,
+.horizontalTab:hover,
+.bottomNavbar:hover {
+  outline-offset: -1px;
+}
 .component:hover .dropZone.horizontalDrag,
 .column:hover .dropZone.horizontalDrag,
 .grid:hover .dropZone.horizontalDrag,
@@ -2434,6 +2449,13 @@ a {
 .horizontalTab:hover .dropZone.horizontalDrag,
 .bottomNavbar:hover .dropZone.horizontalDrag {
   z-index: 0;
+}
+
+.component {
+  outline-offset: -1px;
+}
+.component.image {
+  outline-offset: 0px;
 }
 
 .leftsidebar, .rightsidebar {
