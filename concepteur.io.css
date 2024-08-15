@@ -2452,9 +2452,9 @@ a {
 }
 
 .component {
-  outline-offset: -1px;
+  outline-offset: -2px;
 }
-.component.image {
+.component.image.active {
   outline-offset: 0px;
 }
 
