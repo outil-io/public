@@ -2847,6 +2847,7 @@ a {
 .carousel,
 .folder,
 .list,
+.courses_list,
 .modules,
 .tableau {
   height: inherit;
@@ -2864,6 +2865,7 @@ a {
 .carousel.draggable:hover,
 .folder.draggable:hover,
 .list.draggable:hover,
+.courses_list.draggable:hover,
 .modules.draggable:hover,
 .tableau.draggable:hover {
   outline: 1px solid rgba(64, 10, 151, 0.644) !important;
@@ -2881,6 +2883,7 @@ a {
 .carousel.draggable:hover > div > .content > div > .section,
 .folder.draggable:hover > div > .content > div > .section,
 .list.draggable:hover > div > .content > div > .section,
+.courses_list.draggable:hover > div > .content > div > .section,
 .modules.draggable:hover > div > .content > div > .section,
 .tableau.draggable:hover > div > .content > div > .section {
   outline: 1px dashed rgb(10, 151, 17);
@@ -2897,6 +2900,7 @@ a {
 .carousel.draggable:hover > div > .content > div > .column,
 .folder.draggable:hover > div > .content > div > .column,
 .list.draggable:hover > div > .content > div > .column,
+.courses_list.draggable:hover > div > .content > div > .column,
 .modules.draggable:hover > div > .content > div > .column,
 .tableau.draggable:hover > div > .content > div > .column {
   outline: 1px dashed rgb(238, 204, 204);
@@ -2913,6 +2917,7 @@ a {
 .carousel.draggable:hover > div > .content > div > .grid,
 .folder.draggable:hover > div > .content > div > .grid,
 .list.draggable:hover > div > .content > div > .grid,
+.courses_list.draggable:hover > div > .content > div > .grid,
 .modules.draggable:hover > div > .content > div > .grid,
 .tableau.draggable:hover > div > .content > div > .grid {
   outline: 1px dashed rgb(238, 204, 204);
@@ -2929,6 +2934,7 @@ a {
 .carousel.draggable:hover > div > .content > div > .component,
 .folder.draggable:hover > div > .content > div > .component,
 .list.draggable:hover > div > .content > div > .component,
+.courses_list.draggable:hover > div > .content > div > .component,
 .modules.draggable:hover > div > .content > div > .component,
 .tableau.draggable:hover > div > .content > div > .component {
   outline: 1px dashed rgba(0, 0, 0, 0.479);
@@ -2945,6 +2951,7 @@ a {
 .carousel.draggable.active,
 .folder.draggable.active,
 .list.draggable.active,
+.courses_list.draggable.active,
 .modules.draggable.active,
 .tableau.draggable.active {
   outline: 2px solid rgba(64, 10, 151, 0.644) !important;
@@ -2962,6 +2969,7 @@ a {
 .carousel.draggable.active > .dragHandle,
 .folder.draggable.active > .dragHandle,
 .list.draggable.active > .dragHandle,
+.courses_list.draggable.active > .dragHandle,
 .modules.draggable.active > .dragHandle,
 .tableau.draggable.active > .dragHandle {
   display: block;
@@ -2981,6 +2989,7 @@ a {
 .carousel:hover > div > .dropZone.horizontalDrag,
 .folder:hover > div > .dropZone.horizontalDrag,
 .list:hover > div > .dropZone.horizontalDrag,
+.courses_list:hover > div > .dropZone.horizontalDrag,
 .modules:hover > div > .dropZone.horizontalDrag,
 .tableau:hover > div > .dropZone.horizontalDrag {
   display: none;
@@ -2997,6 +3006,7 @@ a {
 .carousel + .builder-type,
 .folder + .builder-type,
 .list + .builder-type,
+.courses_list + .builder-type,
 .modules + .builder-type,
 .tableau + .builder-type {
   background-color: rgba(64, 10, 151, 0.644);
@@ -3005,6 +3015,7 @@ a {
 .carousel > .builder-selector,
 .folder > .builder-selector,
 .list > .builder-selector,
+.courses_list > .builder-selector,
 .custom > .builder-selector,
 .tableau > .builder-selector,
 .modules > .builder-selector,
@@ -3019,6 +3030,7 @@ a {
 .carousel.draggable.active,
 .folder.draggable.active,
 .list.draggable.active,
+.courses_list.draggable.active,
 .custom.draggable.active,
 .tableau.draggable.active,
 .modules.draggable.active,
@@ -3028,6 +3040,7 @@ a {
 .carousel.draggable.active > .builder-selector,
 .folder.draggable.active > .builder-selector,
 .list.draggable.active > .builder-selector,
+.courses_list.draggable.active > .builder-selector,
 .custom.draggable.active > .builder-selector,
 .tableau.draggable.active > .builder-selector,
 .modules.draggable.active > .builder-selector,
@@ -3038,6 +3051,7 @@ a {
 .carousel.draggable.active + .builder-type,
 .folder.draggable.active + .builder-type,
 .list.draggable.active + .builder-type,
+.courses_list.draggable.active + .builder-type,
 .custom.draggable.active + .builder-type,
 .tableau.draggable.active + .builder-type,
 .modules.draggable.active + .builder-type,
@@ -3049,6 +3063,7 @@ a {
 .carousel.draggable:hover,
 .folder.draggable:hover,
 .list.draggable:hover,
+.courses_list.draggable:hover,
 .custom.draggable:hover,
 .tableau.draggable:hover,
 .modules.draggable:hover,
@@ -3058,6 +3073,7 @@ a {
 .carousel.draggable:hover > .builder-selector,
 .folder.draggable:hover > .builder-selector,
 .list.draggable:hover > .builder-selector,
+.courses_list.draggable:hover > .builder-selector,
 .custom.draggable:hover > .builder-selector,
 .tableau.draggable:hover > .builder-selector,
 .modules.draggable:hover > .builder-selector,
@@ -3068,6 +3084,7 @@ a {
 .carousel.draggable:hover + .builder-type,
 .folder.draggable:hover + .builder-type,
 .list.draggable:hover + .builder-type,
+.courses_list.draggable:hover + .builder-type,
 .custom.draggable:hover + .builder-type,
 .tableau.draggable:hover + .builder-type,
 .modules.draggable:hover + .builder-type,
