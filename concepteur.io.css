@@ -2261,9 +2261,6 @@ a {
   scroll-margin: 150px;
   padding: 10px;
   width: 100%;
-  display: flex;
-  flex-wrap: nowrap !important;
-  overflow-x: auto !important;
   justify-content: unset !important;
   -webkit-overflow-scrolling: touch;
 }
@@ -2272,10 +2269,6 @@ a {
   .ls::-webkit-scrollbar {
     display: none;
   }
-}
-.list.draggable,
-.ls.draggable {
-  display: grid;
 }
 .list .scrollButton,
 .ls .scrollButton {
@@ -3154,14 +3147,6 @@ a {
 .list > div::-webkit-scrollbar {
   display: none;
 }
-.list > div > .content {
-  display: flex;
-  flex-wrap: nowrap;
-}
-.list > div > .content > div {
-  display: inline-table;
-}
-
 .builder-main-sideBar .sideBar {
   width: 100%;
   overflow: visible;
