@@ -2840,6 +2840,7 @@ a {
 .carousel,
 .folder,
 .list,
+.nav_list,
 .courses_list,
 .modules,
 .tableau {
@@ -2858,6 +2859,7 @@ a {
 .carousel.draggable:hover,
 .folder.draggable:hover,
 .list.draggable:hover,
+.nav_list.draggable:hover,
 .courses_list.draggable:hover,
 .modules.draggable:hover,
 .tableau.draggable:hover {
@@ -2876,6 +2878,7 @@ a {
 .carousel.draggable:hover > div > .content > div > .section,
 .folder.draggable:hover > div > .content > div > .section,
 .list.draggable:hover > div > .content > div > .section,
+.nav_list.draggable:hover > div > .content > div > .section,
 .courses_list.draggable:hover > div > .content > div > .section,
 .modules.draggable:hover > div > .content > div > .section,
 .tableau.draggable:hover > div > .content > div > .section {
@@ -2893,6 +2896,7 @@ a {
 .carousel.draggable:hover > div > .content > div > .column,
 .folder.draggable:hover > div > .content > div > .column,
 .list.draggable:hover > div > .content > div > .column,
+.nav_list.draggable:hover > div > .content > div > .column,
 .courses_list.draggable:hover > div > .content > div > .column,
 .modules.draggable:hover > div > .content > div > .column,
 .tableau.draggable:hover > div > .content > div > .column {
@@ -2910,6 +2914,7 @@ a {
 .carousel.draggable:hover > div > .content > div > .grid,
 .folder.draggable:hover > div > .content > div > .grid,
 .list.draggable:hover > div > .content > div > .grid,
+.nav_list.draggable:hover > div > .content > div > .grid,
 .courses_list.draggable:hover > div > .content > div > .grid,
 .modules.draggable:hover > div > .content > div > .grid,
 .tableau.draggable:hover > div > .content > div > .grid {
@@ -2927,6 +2932,7 @@ a {
 .carousel.draggable:hover > div > .content > div > .component,
 .folder.draggable:hover > div > .content > div > .component,
 .list.draggable:hover > div > .content > div > .component,
+.nav_list.draggable:hover > div > .content > div > .component,
 .courses_list.draggable:hover > div > .content > div > .component,
 .modules.draggable:hover > div > .content > div > .component,
 .tableau.draggable:hover > div > .content > div > .component {
@@ -2944,6 +2950,7 @@ a {
 .carousel.draggable.active,
 .folder.draggable.active,
 .list.draggable.active,
+.nav_list.draggable.active,
 .courses_list.draggable.active,
 .modules.draggable.active,
 .tableau.draggable.active {
@@ -2962,6 +2969,7 @@ a {
 .carousel.draggable.active > .dragHandle,
 .folder.draggable.active > .dragHandle,
 .list.draggable.active > .dragHandle,
+.nav_list.draggable.active > .dragHandle,
 .courses_list.draggable.active > .dragHandle,
 .modules.draggable.active > .dragHandle,
 .tableau.draggable.active > .dragHandle {
@@ -2982,6 +2990,7 @@ a {
 .carousel:hover > div > .dropZone.horizontalDrag,
 .folder:hover > div > .dropZone.horizontalDrag,
 .list:hover > div > .dropZone.horizontalDrag,
+.nav_list:hover > div > .dropZone.horizontalDrag,
 .courses_list:hover > div > .dropZone.horizontalDrag,
 .modules:hover > div > .dropZone.horizontalDrag,
 .tableau:hover > div > .dropZone.horizontalDrag {
@@ -2999,6 +3008,7 @@ a {
 .carousel + .builder-type,
 .folder + .builder-type,
 .list + .builder-type,
+.nav_list + .builder-type,
 .courses_list + .builder-type,
 .modules + .builder-type,
 .tableau + .builder-type {
@@ -3008,6 +3018,7 @@ a {
 .carousel > .builder-selector,
 .folder > .builder-selector,
 .list > .builder-selector,
+.nav_list > .builder-selector,
 .courses_list > .builder-selector,
 .custom > .builder-selector,
 .tableau > .builder-selector,
@@ -3023,6 +3034,7 @@ a {
 .carousel.draggable.active,
 .folder.draggable.active,
 .list.draggable.active,
+.nav_list.draggable.active,
 .courses_list.draggable.active,
 .custom.draggable.active,
 .tableau.draggable.active,
@@ -3033,6 +3045,7 @@ a {
 .carousel.draggable.active > .builder-selector,
 .folder.draggable.active > .builder-selector,
 .list.draggable.active > .builder-selector,
+.nav_list.draggable.active > .builder-selector,
 .courses_list.draggable.active > .builder-selector,
 .custom.draggable.active > .builder-selector,
 .tableau.draggable.active > .builder-selector,
@@ -3044,6 +3057,7 @@ a {
 .carousel.draggable.active + .builder-type,
 .folder.draggable.active + .builder-type,
 .list.draggable.active + .builder-type,
+.nav_list.draggable.active + .builder-type,
 .courses_list.draggable.active + .builder-type,
 .custom.draggable.active + .builder-type,
 .tableau.draggable.active + .builder-type,
@@ -3056,6 +3070,7 @@ a {
 .carousel.draggable:hover,
 .folder.draggable:hover,
 .list.draggable:hover,
+.nav_list.draggable:hover,
 .courses_list.draggable:hover,
 .custom.draggable:hover,
 .tableau.draggable:hover,
@@ -3066,6 +3081,7 @@ a {
 .carousel.draggable:hover > .builder-selector,
 .folder.draggable:hover > .builder-selector,
 .list.draggable:hover > .builder-selector,
+.nav_list.draggable:hover > .builder-selector,
 .courses_list.draggable:hover > .builder-selector,
 .custom.draggable:hover > .builder-selector,
 .tableau.draggable:hover > .builder-selector,
@@ -3077,6 +3093,7 @@ a {
 .carousel.draggable:hover + .builder-type,
 .folder.draggable:hover + .builder-type,
 .list.draggable:hover + .builder-type,
+.nav_list.draggable:hover + .builder-type,
 .courses_list.draggable:hover + .builder-type,
 .custom.draggable:hover + .builder-type,
 .tableau.draggable:hover + .builder-type,
@@ -3184,9 +3201,6 @@ a {
   display: flex;
   flex-direction: column;
 }
-.builder .navbar > div, .builder .header > div {
-  width: 100%;
-}
 .builder .navbar > div > .content, .builder .header > div > .content {
   height: initial !important;
 }
@@ -3251,10 +3265,6 @@ a {
 .MuiGrid-root,
 .MuiGrid-item {
   background-color: transparent;
-}
-
-.MuiMenu-root {
-  z-index: 3500 !important;
 }
 
 .preview-result {
@@ -3551,12 +3561,10 @@ details > p {
   top: 0;
   position: absolute !important;
   height: 100%;
-  z-index: 1500;
 }
 
 .builder-main-sideBar {
   width: fit-content;
-  z-index: 1300 !important;
 }
 .builder-main-sideBar > div {
   height: inherit;
@@ -3622,6 +3630,11 @@ details > p {
   vertical-align: middle;
 }
 
+.barChart {
+  min-width: 100px;
+  min-height: 100px;
+}
+
 .left-right-nowrap {
   justify-content: space-between;
   display: flex;
@@ -3676,12 +3689,25 @@ details > p {
   color: inherit;
 }
 
+.ic {
+  width: fit-content;
+}
+
+.text {
+  white-space: pre-wrap;
+}
+
+.txt {
+  white-space: pre-wrap;
+}
+
 .icon {
   justify-content: center;
   align-content: center;
   justify-items: center;
   justify-self: center;
   display: grid;
+  height: inherit !important;
 }
 
 .k-button {
@@ -3725,13 +3751,6 @@ details > p {
 }
 
 .k-textblock {
-  overflow-wrap: break-word;
-  word-wrap: break-word;
-  word-break: break-word;
-  height: fit-content;
-}
-
-.txt {
   overflow-wrap: break-word;
   word-wrap: break-word;
   word-break: break-word;
@@ -3978,6 +3997,38 @@ img {
 .star-rating label:hover,
 .star-rating label:hover ~ label {
   color: #fc0;
+}
+
+/***********************************************/
+/********* Details *****************************/
+/***********************************************/
+details {
+  overflow: hidden; /* Keep this line to prevent an odd blue outline around the element in Safari. */
+}
+
+summary {
+  display: block; /* This hides the summary's ::marker pseudo-element */
+}
+
+summary::-webkit-details-marker {
+  display: none; /* This also hides the ::marker pseudo-element, but in Safari */
+}
+
+div.content-details {
+  box-sizing: border-box;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 200ms ease-out;
+}
+
+details[open] + div.content-details {
+  max-height: 800px; /* Set a max-height value enough to show all the content */
+  transition: max-height 400ms ease-out, border 0ms linear;
+}
+
+details[open] .toogle {
+  rotate: 90deg;
+  transition: rotate 200ms ease-out;
 }
 
 /******************************************************************/
@@ -4371,6 +4422,8 @@ img {
 
 .configBox-header {
   padding: 10px 15px 5px 15px;
+  background-color: #03001F;
+  color: lightgray;
 }
 
 .colorItem {
@@ -4417,7 +4470,17 @@ img {
   padding: 10px;
 }
 
-.jodit-workplace strong, .jodit-workplace h1, .jodit-workplace h2, .jodit-workplace h3, .jodit-workplace h4, .jodit-workplace h5, .jodit-workplace h6, .jodit-workplace p, .jodit-workplace strong, .jodit-workplace i, .jodit-workplace b {
+.jodit-workplace strong,
+.jodit-workplace h1,
+.jodit-workplace h2,
+.jodit-workplace h3,
+.jodit-workplace h4,
+.jodit-workplace h5,
+.jodit-workplace h6,
+.jodit-workplace p,
+.jodit-workplace strong,
+.jodit-workplace i,
+.jodit-workplace b {
   margin: 0;
 }
 
@@ -4457,6 +4520,38 @@ img {
   z-index: 4000 !important;
 }
 
+.select-input {
+  padding: 10px;
+  border-radius: 2px;
+  border: none;
+}
+.select-input:hover {
+  outline: 1px solid gray;
+}
+
+pre {
+  background-color: ghostwhite;
+  border: 1px solid silver;
+  padding: 10px 10px;
+}
+
+[contenteditable=true]:focus, [href]:focus, [tabindex]:not([tabindex="-1"]):focus, button:focus, details:focus, input:focus, select:focus, textarea:focus {
+  outline: none !important;
+  outline-offset: 0px !important;
+}
+
+.json-key {
+  color: brown;
+}
+
+.json-value {
+  color: navy;
+}
+
+.json-string {
+  color: olive;
+}
+
 .button-scroll {
   tab-size: 4;
   --bs-blue: #0d6efd;
@@ -4489,21 +4584,21 @@ img {
   --bs-danger: #dc3545;
   --bs-light: #f8f9fa;
   --bs-dark: #212529;
-  --bs-primary-rgb: 13,110,253;
-  --bs-secondary-rgb: 108,117,125;
-  --bs-success-rgb: 25,135,84;
-  --bs-info-rgb: 13,202,240;
-  --bs-warning-rgb: 255,193,7;
-  --bs-danger-rgb: 220,53,69;
-  --bs-light-rgb: 248,249,250;
-  --bs-dark-rgb: 33,37,41;
-  --bs-white-rgb: 255,255,255;
-  --bs-black-rgb: 0,0,0;
-  --bs-body-color-rgb: 33,37,41;
-  --bs-body-bg-rgb: 255,255,255;
-  --bs-font-sans-serif: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
-  --bs-font-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
-  --bs-gradient: linear-gradient(180deg,hsla(0,0%,100%,.15),hsla(0,0%,100%,0));
+  --bs-primary-rgb: 13, 110, 253;
+  --bs-secondary-rgb: 108, 117, 125;
+  --bs-success-rgb: 25, 135, 84;
+  --bs-info-rgb: 13, 202, 240;
+  --bs-warning-rgb: 255, 193, 7;
+  --bs-danger-rgb: 220, 53, 69;
+  --bs-light-rgb: 248, 249, 250;
+  --bs-dark-rgb: 33, 37, 41;
+  --bs-white-rgb: 255, 255, 255;
+  --bs-black-rgb: 0, 0, 0;
+  --bs-body-color-rgb: 33, 37, 41;
+  --bs-body-bg-rgb: 255, 255, 255;
+  --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --bs-gradient: linear-gradient(180deg, hsla(0, 0%, 100%, .15), hsla(0, 0%, 100%, 0));
   --bs-body-font-family: var(--bs-font-sans-serif);
   --bs-body-font-size: 1rem;
   --bs-body-font-weight: 400;
@@ -4538,7 +4633,7 @@ img {
   --tw-ring-inset: ;
   --tw-ring-offset-width: 0px;
   --tw-ring-offset-color: #fff;
-  --tw-ring-color: rgba(59,130,246,.5);
+  --tw-ring-color: rgba(59, 130, 246, .5);
   --tw-ring-offset-shadow: 0 0 #0000;
   --tw-ring-shadow: 0 0 #0000;
   --tw-blur: ;
@@ -4588,7 +4683,7 @@ img {
   color: rgb(255 255 255/var(--tw-text-opacity));
   --tw-shadow-colored: 0 30px 50px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 rgba(0, 0, 0, 0)), var(--tw-ring-shadow, 0 0 rgba(0, 0, 0, 0)), var(--tw-shadow);
-  --tw-shadow-color: rgba(0,0,0,.3);
+  --tw-shadow-color: rgba(0, 0, 0, .3);
   --tw-shadow: var(--tw-shadow-colored);
   cursor: pointer;
 }
