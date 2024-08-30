@@ -2362,6 +2362,7 @@ a {
   overflow-y: hidden;
   outline-offset: -2px;
   background-color: transparent;
+  background-repeat: no-repeat;
 }
 .component .horizontalDrag.left,
 .column .horizontalDrag.left,
@@ -3235,6 +3236,9 @@ a {
   display: block;
 }
 
+.preview .builder-main-sideBar {
+  background-repeat: no-repeat;
+}
 @media screen and (max-width: 900px) {
   .preview .builder-main-sideBar {
     position: fixed !important;
@@ -3418,6 +3422,7 @@ details > p {
   padding: 0px;
   height: initial;
   overflow: visible;
+  background-repeat: no-repeat;
 }
 .builder-main-layout.preview .main {
   width: 100%;
@@ -3634,6 +3639,9 @@ details > p {
   outline: none;
 }
 
+.preview {
+  background-repeat: no-repeat;
+}
 .preview input, .preview textarea {
   border: unset;
 }
@@ -3728,6 +3736,10 @@ details > p {
   justify-self: center;
   display: grid;
   height: inherit !important;
+}
+
+.main_preview {
+  background-repeat: no-repeat;
 }
 
 .k-button {
