@@ -3189,6 +3189,18 @@ a {
   width: 100%;
 }
 
+.main_textfield div {
+  height: inherit !important;
+}
+.main_textfield textarea, .main_textfield input {
+  background-color: transparent;
+  border: none;
+  width: 100%;
+  resize: none;
+  box-sizing: border-box;
+  height: 100%;
+}
+
 .modules {
   min-height: 20px;
   min-width: 200px;
@@ -3552,6 +3564,14 @@ details > p {
   height: 100%;
   display: block;
   z-index: 1000;
+}
+.builder-main-sideBar .edit-builder {
+  display: none;
+}
+.builder-main-sideBar :hover .edit-builder {
+  display: block;
+  top: -36px;
+  left: 0px;
 }
 
 .builder-main-sideBar.sm {
