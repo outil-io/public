@@ -1,5 +1,5 @@
 import React from "react"
-import {initConcepteur, PreviewAsync, ReactDOM } from "./dist/index.js"
+/*import {initConcepteur, PreviewAsync, ReactDOM } from "./dist/index.js"
 
 
 initConcepteur({ domain: "ebc.plateforme.me" })
@@ -15,4 +15,4 @@ document.querySelectorAll('.like_button_container')
       e(PreviewAsync, { pageId: commentID })
     );
   });
-    
+    */
