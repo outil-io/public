@@ -1,4 +1,4 @@
-const {initConcepteur, PreviewAsync} = require("./dist/index.js")
+import {initConcepteur, PreviewAsync, ReactDOM } from "./dist/index.js"
 
 
 initConcepteur({ domain: "ebc.plateforme.me" })
