@@ -1,3 +1,5 @@
+console.log("loading...")
+
 import "./dist/index.js"
 console.log("loading...")
 initConcepteur({ domain: "ebc.plateforme.me" })
