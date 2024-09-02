@@ -1,3 +1,4 @@
+import React from "react"
 import {initConcepteur, PreviewAsync, ReactDOM } from "./dist/index.js"
 
 
