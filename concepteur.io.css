@@ -2452,7 +2452,8 @@ a {
   outline-offset: 0px;
 }
 
-.leftsidebar, .rightsidebar {
+.leftsidebar,
+.rightsidebar {
   overflow-y: auto;
 }
 
@@ -3193,7 +3194,8 @@ a {
 .main_textfield div {
   height: inherit !important;
 }
-.main_textfield textarea, .main_textfield input {
+.main_textfield textarea,
+.main_textfield input {
   background-color: transparent;
   border: none;
   width: 100%;
@@ -3208,17 +3210,20 @@ a {
   width: 100%;
 }
 
-.builder .navbar, .builder .header {
+.builder .navbar,
+.builder .header {
   display: flex;
   align-items: center;
   display: flex;
   flex-direction: column;
 }
-.builder .navbar > div > .content, .builder .header > div > .content {
+.builder .navbar > div > .content,
+.builder .header > div > .content {
   height: initial !important;
 }
 
-.builder .navbar, .builder .header {
+.builder .navbar,
+.builder .header {
   flex-direction: initial;
 }
 
@@ -3642,7 +3647,8 @@ details > p {
 .preview {
   background-repeat: no-repeat;
 }
-.preview input, .preview textarea {
+.preview input,
+.preview textarea {
   border: unset;
 }
 .preview .builder-main-bottomNavbar {
@@ -3693,7 +3699,10 @@ details > p {
 /* .row {
 	--bs-gutter-x: 0!important;
 } */
-[type=button]:not(:disabled), [type=reset]:not(:disabled), [type=submit]:not(:disabled), button:not(:disabled) {
+[type=button]:not(:disabled),
+[type=reset]:not(:disabled),
+[type=submit]:not(:disabled),
+button:not(:disabled) {
   border: unset;
 }
 
@@ -3859,7 +3868,8 @@ details > p {
   padding: 0px !important;
 }
 
-.pct > img, .image {
+.pct > img,
+.image {
   max-width: 100%;
   height: fit-content;
   object-fit: contain;
@@ -4035,15 +4045,18 @@ img {
 /********* Details *****************************/
 /***********************************************/
 details {
-  overflow: hidden; /* Keep this line to prevent an odd blue outline around the element in Safari. */
+  overflow: hidden;
+  /* Keep this line to prevent an odd blue outline around the element in Safari. */
 }
 
 summary {
-  display: block; /* This hides the summary's ::marker pseudo-element */
+  display: block;
+  /* This hides the summary's ::marker pseudo-element */
 }
 
 summary::-webkit-details-marker {
-  display: none; /* This also hides the ::marker pseudo-element, but in Safari */
+  display: none;
+  /* This also hides the ::marker pseudo-element, but in Safari */
 }
 
 div.content-details {
@@ -4054,7 +4067,8 @@ div.content-details {
 }
 
 details[open] + div.content-details {
-  max-height: 800px; /* Set a max-height value enough to show all the content */
+  max-height: 800px;
+  /* Set a max-height value enough to show all the content */
   transition: max-height 400ms ease-out, border 0ms linear;
 }
 
@@ -4422,10 +4436,14 @@ details[open] .toogle {
 }
 
 .typewriter {
-  border-right: 0.15em solid orange; /* The typwriter cursor */
-  white-space: nowrap !important; /* Keeps the content on a single line */
-  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-  letter-spacing: 0.15em; /* Adjust as needed */
+  border-right: 0.15em solid orange;
+  /* The typwriter cursor */
+  white-space: nowrap !important;
+  /* Keeps the content on a single line */
+  margin: 0 auto;
+  /* Gives that scrolling effect as the typing happens */
+  letter-spacing: 0.15em;
+  /* Adjust as needed */
   animation: typing 3.5s steps(30, end), blink-caret 0.5s step-end infinite;
 }
 
