@@ -3627,6 +3627,14 @@ details > p {
   width: 100%;
   z-index: 1290;
 }
+.builder-main-header .edit-builder {
+  display: none;
+}
+.builder-main-header:hover .edit-builder {
+  display: block;
+  top: 0px;
+  left: 0px;
+}
 
 .builder-main-bottomNavbar {
   width: 100%;
