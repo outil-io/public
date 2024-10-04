@@ -4784,6 +4784,8 @@ pre {
 .text-content-editor {
   max-width: 230px;
   padding: 5px;
+  font-size: 13px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: white;
   height: 75px;
 }
