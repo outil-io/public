@@ -4611,7 +4611,14 @@ pre {
   padding: 10px 10px;
 }
 
-[contenteditable=true]:focus, [href]:focus, [tabindex]:not([tabindex="-1"]):focus, button:focus, details:focus, input:focus, select:focus, textarea:focus {
+[contenteditable=true]:focus,
+[href]:focus,
+[tabindex]:not([tabindex="-1"]):focus,
+button:focus,
+details:focus,
+input:focus,
+select:focus,
+textarea:focus {
   outline: none !important;
   outline-offset: 0px !important;
 }
@@ -4764,7 +4771,8 @@ pre {
   cursor: pointer;
 }
 
-.txt-editor i, .text-content-editor i {
+.txt-editor i,
+.text-content-editor i {
   width: 25px;
   height: 25px;
   border: 1px solid black;
@@ -4772,11 +4780,13 @@ pre {
   font-size: 14px;
   margin: 5px;
 }
-.txt-editor i:hover, .text-content-editor i:hover {
+.txt-editor i:hover,
+.text-content-editor i:hover {
   background-color: black;
   color: white;
 }
-.txt-editor i.active, .text-content-editor i.active {
+.txt-editor i.active,
+.text-content-editor i.active {
   background-color: black;
   color: white;
 }
@@ -4803,6 +4813,58 @@ pre {
 }
 .renderInput.textfield:hover i {
   display: flex;
+}
+
+/***********************************************/
+/********* Details *****************************/
+/***********************************************/
+details {
+  overflow: hidden;
+  /* Keep this line to prevent an odd blue outline around the element in Safari. */
+}
+
+summary {
+  display: block;
+  /* This hides the summary's ::marker pseudo-element */
+}
+
+summary::-webkit-details-marker {
+  display: none;
+  /* This also hides the ::marker pseudo-element, but in Safari */
+}
+
+div.content-details {
+  box-sizing: border-box;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 200ms ease-out;
+}
+
+details[open] + div.content-details {
+  max-height: 800px;
+  /* Set a max-height value enough to show all the content */
+  transition: max-height 400ms ease-out, border 0ms linear;
+}
+
+details[open] .toogle {
+  rotate: 90deg;
+  transition: rotate 200ms ease-out;
+}
+
+.folder_JNZ {
+  height: fit-content;
+  cursor: pointer;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.jIp {
+  height: fit-content;
+  flex-direction: column;
+  display: flex !important;
+  flex-wrap: wrap;
 }
 
 .each-slide-effect {
