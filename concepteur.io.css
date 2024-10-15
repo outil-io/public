@@ -2270,6 +2270,14 @@ a {
     display: none;
   }
 }
+.list .content-list > .refresh-list,
+.ls .content-list > .refresh-list {
+  display: none;
+}
+.list .content-list:hover > .refresh-list,
+.ls .content-list:hover > .refresh-list {
+  display: block;
+}
 .list .scrollButton,
 .ls .scrollButton {
   position: absolute;
@@ -4792,7 +4800,6 @@ textarea:focus {
 }
 
 .text-content-editor {
-  max-width: 230px;
   padding: 5px;
   font-size: 13px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -4865,6 +4872,27 @@ details[open] .toogle {
   flex-direction: column;
   display: flex !important;
   flex-wrap: wrap;
+}
+
+.variable-picker {
+  padding: 50px;
+}
+.variable-picker .variable-picker-object {
+  width: 100%;
+  border: 1px solid rgba(128, 128, 128, 0.272);
+}
+.variable-picker .variable-picker-object > .header {
+  border: 1px solid rgba(204, 202, 202, 0.285);
+  padding: 10px;
+  background-color: rgba(204, 202, 202, 0.285);
+}
+.variable-picker .variable-picker-simple {
+  width: 100%;
+  display: flex;
+  border-bottom: 1px solid rgba(172, 170, 170, 0.199);
+}
+.variable-picker .content-details-body {
+  padding: 20px;
 }
 
 .each-slide-effect {
