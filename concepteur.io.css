@@ -3113,6 +3113,38 @@ a {
   background-color: rgb(255, 80, 223);
 }
 
+.folder > .builder-selector {
+  background-color: rgba(64, 10, 151, 0.644) !important;
+  color: white !important;
+  position: absolute;
+  height: 15px;
+  padding: 0px 5px;
+  top: -23px;
+}
+.folder.draggable.active {
+  outline: 2px solid rgba(64, 10, 151, 0.644) !important;
+}
+.folder.draggable.active > .builder-selector {
+  display: flex;
+  width: fit-content;
+}
+.folder.draggable.active + .builder-type {
+  display: flex;
+  background-color: rgba(64, 10, 151, 0.644);
+  width: fit-content;
+}
+.folder.draggable:hover {
+  outline: 1px solid rgba(64, 10, 151, 0.644) !important;
+}
+.folder.draggable:hover > .builder-selector {
+  display: flex;
+  width: fit-content;
+}
+.folder.draggable:hover + .builder-type {
+  display: flex;
+  background-color: rgba(64, 10, 151, 0.644);
+}
+
 .component > .builder-selector {
   background-color: black !important;
   color: white !important;
