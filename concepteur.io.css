@@ -4578,8 +4578,15 @@ details[open] .toogle {
   padding: 0px 10px;
   min-height: unset !important;
   height: 40px !important;
-  text-transform: uppercase;
+  border-left: 2px solid #1976D2;
   font-weight: bold;
+}
+.configMenu .accordion-summary-item {
+  background: rgba(224, 221, 221, 0.162);
+  padding: 10px 10px;
+  min-height: unset !important;
+  font-weight: bold;
+  border-left: 2px solid #1976D2;
 }
 .configMenu .accordion-detail {
   background: white;
@@ -4626,6 +4633,9 @@ details[open] .toogle {
 
 .configMenu-accordion {
   margin: 0px !important;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .MuiGrid-root {
