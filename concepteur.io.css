@@ -4580,17 +4580,17 @@ details[open] .toogle {
   height: 40px !important;
   border-left: 2px solid #1976D2;
   font-weight: bold;
+  margin-bottom: 2px;
 }
 .configMenu .accordion-summary-item {
   background: rgba(224, 221, 221, 0.162);
   padding: 10px 10px;
   min-height: unset !important;
   font-weight: bold;
-  border-left: 2px solid #1976D2;
 }
 .configMenu .accordion-detail {
   background: white;
-  padding: 10px;
+  padding: 0px 10px 10px 10px;
 }
 
 .jodit-workplace strong,
