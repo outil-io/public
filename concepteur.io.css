@@ -2181,6 +2181,12 @@ h6 {
 a {
   text-decoration: none;
   color: inherit;
+  display: inline-block;
+  width: fit-content;
+}
+
+.html {
+  overflow: visible;
 }
 
 .sideBarItem {
@@ -2190,6 +2196,10 @@ a {
   padding: 10px;
   margin-top: 10px;
   background: #ccc;
+}
+
+span {
+  width: fit-content;
 }
 
 .sideBar,
@@ -2248,10 +2258,7 @@ a {
 
 .dropZone.horizontalDrag {
   position: absolute;
-  width: 20px;
   height: 100%;
-  top: 0px;
-  left: -10px;
   z-index: 0;
 }
 
@@ -2366,8 +2373,7 @@ a {
 .footer,
 .horizontalTab,
 .bottomNavbar {
-  overflow-x: hidden;
-  overflow-y: hidden;
+  max-width: 100%;
   outline-offset: -2px;
   background-color: transparent;
   background-repeat: no-repeat;
@@ -2400,12 +2406,10 @@ a {
 .footer .horizontalDrag.right,
 .horizontalTab .horizontalDrag.right,
 .bottomNavbar .horizontalDrag.right {
-  width: 100%;
-  height: 100%;
-  top: 0px;
-  bottom: 0px;
-  left: 0px;
-  right: 0px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 .component .clickable,
 .column .clickable,
@@ -2470,8 +2474,6 @@ a {
 }
 
 .empty-block {
-  min-height: 100px !important;
-  min-width: 250px !important;
   z-index: 100;
 }
 
@@ -2479,9 +2481,6 @@ a {
   min-height: 20px;
 }
 
-.component {
-  overflow: hidden;
-}
 .component.active, .component:hover {
   overflow: visible;
 }
@@ -2515,15 +2514,6 @@ a {
 .video {
   min-height: 100px;
   min-width: 200px;
-}
-
-.dropZone.horizontalDrag-right {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  right: -10px;
-  z-index: 0;
 }
 
 .dropColumn {
@@ -2603,7 +2593,7 @@ a {
   background-size: cover;
   background-position: center;
   background-color: transparent;
-  align-content: start;
+  position: relative;
 }
 
 .cp,
@@ -2615,8 +2605,6 @@ a {
   background-position: center;
   background-color: transparent;
   align-content: baseline;
-  display: flex;
-  flex-wrap: wrap;
 }
 
 .sb {
@@ -2627,48 +2615,45 @@ a {
   height: initial;
 }
 
-.component {
+.component, .h2, .h3, .a {
   min-height: 20px;
   padding: 0px 0px;
   vertical-align: middle;
-  min-height: fit-content;
   background-color: transparent;
   line-height: 1.4;
 }
-.component p {
+.component p, .h2 p, .h3 p, .a p {
   line-height: 1.4;
 }
-.component.draggable:hover {
+.component.draggable:hover, .h2.draggable:hover, .h3.draggable:hover, .a.draggable:hover {
   outline: 1px solid black !important;
   z-index: 3;
 }
-.component.draggable:hover > div > .content > div > .section {
+.component.draggable:hover > .section, .h2.draggable:hover > .section, .h3.draggable:hover > .section, .a.draggable:hover > .section {
   outline: 1px dashed rgb(10, 151, 17);
 }
-.component.draggable:hover > div > .content > div > .column {
+.component.draggable:hover > .column, .h2.draggable:hover > .column, .h3.draggable:hover > .column, .a.draggable:hover > .column {
   outline: 1px dashed rgb(238, 204, 204);
 }
-.component.draggable:hover > div > .content > div > .grid {
+.component.draggable:hover > .grid, .h2.draggable:hover > .grid, .h3.draggable:hover > .grid, .a.draggable:hover > .grid {
   outline: 1px dashed rgb(238, 204, 204);
 }
-.component.draggable:hover > div > .content > div > .component {
+.component.draggable:hover > .component, .h2.draggable:hover > .component, .h3.draggable:hover > .component, .a.draggable:hover > .component {
   outline: 1px dashed rgba(0, 0, 0, 0.479);
 }
-.component.draggable:hover > .builder-selector {
+.component.draggable:hover > .builder-selector, .h2.draggable:hover > .builder-selector, .h3.draggable:hover > .builder-selector, .a.draggable:hover > .builder-selector {
   display: flex;
 }
-.component.draggable.active {
+.component.draggable.active, .h2.draggable.active, .h3.draggable.active, .a.draggable.active {
   outline: 2px solid black !important;
   z-index: 103;
 }
-.component.draggable.active + .builder-type {
+.component.draggable.active + .builder-type, .h2.draggable.active + .builder-type, .h3.draggable.active + .builder-type, .a.draggable.active + .builder-type {
   display: flex;
   background-color: black;
 }
 
 .column {
-  padding: 10px;
-  position: relative;
   background-color: transparent;
 }
 .column > .builder-selector {
@@ -2680,11 +2665,11 @@ a {
 .column.draggable:hover {
   outline: 1px solid rgb(230, 24, 24) !important;
 }
+.column.draggable:hover > .component {
+  outline: 1px dashed rgba(207, 204, 204, 0.712);
+}
 .column.draggable:hover > div > .content > div > div > .dropZone {
   display: none;
-}
-.column.draggable:hover > div > .content > div > .component {
-  outline: 1px dashed rgba(207, 204, 204, 0.712);
 }
 .column.draggable:hover > .builder-selector {
   display: flex;
@@ -2713,8 +2698,6 @@ a {
 
 .grid,
 .horizontalTab {
-  padding: 10px;
-  position: relative;
   background-color: transparent;
 }
 .grid > .builder-selector,
@@ -2728,24 +2711,24 @@ a {
 .horizontalTab.draggable:hover {
   outline: 1px solid rgb(12, 152, 207) !important;
 }
-.grid.draggable:hover > div > .dropZone,
-.horizontalTab.draggable:hover > div > .dropZone {
-  display: none;
+.grid.draggable:hover > .builder-selector,
+.horizontalTab.draggable:hover > .builder-selector {
+  display: flex;
 }
-.grid.draggable:hover > div > .content > div > .section,
-.horizontalTab.draggable:hover > div > .content > div > .section {
+.grid.draggable:hover > .section,
+.horizontalTab.draggable:hover > .section {
   outline: 1px dashed rgb(10, 151, 17);
 }
-.grid.draggable:hover > div > .content > div > .column,
-.horizontalTab.draggable:hover > div > .content > div > .column {
+.grid.draggable:hover > .column,
+.horizontalTab.draggable:hover > .column {
   outline: 1px dashed rgb(238, 204, 204);
 }
-.grid.draggable:hover > div > .content > div > .grid,
-.horizontalTab.draggable:hover > div > .content > div > .grid {
+.grid.draggable:hover > .grid,
+.horizontalTab.draggable:hover > .grid {
   outline: 1px dashed rgb(238, 204, 204);
 }
-.grid.draggable:hover > div > .content > div > .component,
-.horizontalTab.draggable:hover > div > .content > div > .component {
+.grid.draggable:hover > .component,
+.horizontalTab.draggable:hover > .component {
   outline: 1px dashed rgba(0, 0, 0, 0.479);
 }
 .grid.draggable:hover > .builder-selector,
@@ -2797,16 +2780,16 @@ a {
 .section.draggable:hover > .builder-selector {
   display: flex;
 }
-.section.draggable:hover > div > .content > div > .section {
+.section.draggable:hover > .section {
   outline: 1px dashed rgb(10, 151, 17);
 }
-.section.draggable:hover > div > .content > div > .column {
+.section.draggable:hover > .column {
   outline: 1px dashed rgb(238, 204, 204);
 }
-.section.draggable:hover > div > .content > div > .grid {
+.section.draggable:hover > .grid {
   outline: 1px dashed rgb(238, 204, 204);
 }
-.section.draggable:hover > div > .content > div > .component {
+.section.draggable:hover > .component {
   outline: 1px dashed rgba(0, 0, 0, 0.479);
 }
 .section.draggable.active {
@@ -3100,18 +3083,6 @@ a {
   display: flex;
   width: fit-content;
 }
-.carousel.draggable:hover + .builder-type,
-.folder.draggable:hover + .builder-type,
-.list.draggable:hover + .builder-type,
-.nav_list.draggable:hover + .builder-type,
-.courses_list.draggable:hover + .builder-type,
-.custom.draggable:hover + .builder-type,
-.tableau.draggable:hover + .builder-type,
-.modules.draggable:hover + .builder-type,
-.component.draggable:hover + .builder-type {
-  display: flex;
-  background-color: rgb(255, 80, 223);
-}
 
 .folder > .builder-selector {
   background-color: rgba(64, 10, 151, 0.644) !important;
@@ -3140,10 +3111,6 @@ a {
   display: flex;
   width: fit-content;
 }
-.folder.draggable:hover + .builder-type {
-  display: flex;
-  background-color: rgba(64, 10, 151, 0.644);
-}
 
 .component > .builder-selector {
   background-color: black !important;
@@ -3155,10 +3122,6 @@ a {
 }
 .component.draggable:hover {
   outline: 1px solid black !important;
-}
-.component.draggable:hover + .builder-type {
-  display: flex;
-  background-color: black;
 }
 .component.draggable.active {
   outline: 2px solid black !important;
@@ -3473,24 +3436,34 @@ details > p {
   width: 100%;
 }
 
-.builder-main-body, .builder-main-header, .builder-main-footer {
+.builder-main-body,
+.builder-main-header,
+.builder-main-footer {
   position: relative;
 }
 
 .builder-main-layout.builder {
   overflow: visible;
 }
-.builder-main-layout.builder .builder-main-body, .builder-main-layout.builder .builder-main-header, .builder-main-layout.builder .builder-main-footer {
+.builder-main-layout.builder .builder-main-body,
+.builder-main-layout.builder .builder-main-header,
+.builder-main-layout.builder .builder-main-footer {
   position: relative;
   max-width: -webkit-fill-available;
 }
-.builder-main-layout.builder .builder-main-body.sm, .builder-main-layout.builder .builder-main-header.sm, .builder-main-layout.builder .builder-main-footer.sm {
+.builder-main-layout.builder .builder-main-body.sm,
+.builder-main-layout.builder .builder-main-header.sm,
+.builder-main-layout.builder .builder-main-footer.sm {
   max-width: 400px;
 }
-.builder-main-layout.builder .builder-main-body.sm .main_preview, .builder-main-layout.builder .builder-main-header.sm .main_preview, .builder-main-layout.builder .builder-main-footer.sm .main_preview {
+.builder-main-layout.builder .builder-main-body.sm .main_preview,
+.builder-main-layout.builder .builder-main-header.sm .main_preview,
+.builder-main-layout.builder .builder-main-footer.sm .main_preview {
   max-width: 400px;
 }
-.builder-main-layout.builder .builder-main-body.sm .mainEl, .builder-main-layout.builder .builder-main-header.sm .mainEl, .builder-main-layout.builder .builder-main-footer.sm .mainEl {
+.builder-main-layout.builder .builder-main-body.sm .mainEl,
+.builder-main-layout.builder .builder-main-header.sm .mainEl,
+.builder-main-layout.builder .builder-main-footer.sm .mainEl {
   max-width: 400px;
 }
 
@@ -3796,8 +3769,10 @@ button:not(:disabled) {
   width: fit-content;
 }
 
-.text {
+.text, .h2, .h3, .a {
   white-space: pre-wrap;
+  max-width: 100%;
+  width: fit-content;
 }
 
 .txt {
@@ -3934,18 +3909,6 @@ button:not(:disabled) {
   padding: 0px !important;
 }
 
-.pct > img,
-.image {
-  max-width: 100%;
-  height: fit-content;
-  object-fit: contain;
-  object-position: center;
-  align-items: center;
-  align-content: center;
-  justify-content: center;
-  overflow: hidden;
-}
-
 img {
   height: fit-content;
   min-height: auto;
@@ -3953,6 +3916,22 @@ img {
   object-fit: cover;
   object-position: center;
   height: fit-content;
+}
+
+.pct > img,
+.image {
+  max-width: 100%;
+  height: inherit;
+  object-fit: contain;
+  object-position: center;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  max-height: 100%;
+}
+.pct > img img,
+.image img {
+  height: inherit;
 }
 
 .row img {
